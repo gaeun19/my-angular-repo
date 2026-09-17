@@ -19,7 +19,7 @@ phases:
       - chmod +x deploy-scripts/*.sh
 artifacts:
   files:
-    - appspec.yml
     - 'dist/my-angular-project/**/*'
+    - appspec.yml
     - 'deploy-scripts/**/*'
 

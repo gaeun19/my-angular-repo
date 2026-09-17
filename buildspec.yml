@@ -14,9 +14,12 @@ phases:
       - echo "Build completed."
     finally:
       - echo This is the finally block execution!
+  post_build:
+    commands:
+      - chmod +x deploy-scripts/*.sh
 artifacts:
-  base-directory: dist/my-angular-project
   files:
-    - '**/*'
+    - appspec.yml
+    - 'dist/my-angular-project/**/*'
+    - 'deploy-scripts/**/*'
 
-    
